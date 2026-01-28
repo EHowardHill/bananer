@@ -1,0 +1,13 @@
+#ifndef GE_VARIABLES_H
+#define GE_VARIABLES_H
+
+enum VARIABLES
+{
+    GHOST_TALK,
+    BEAR_DEFEAT,
+    HENRY_TALK,
+    HAVE_PANAGIA,
+    VARIABLES_SIZE
+};
+
+#endif

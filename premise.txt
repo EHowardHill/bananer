@@ -1,0 +1,5 @@
+I wrote many games in the Butano engine, for Gameboy Advance.
+
+My goal is to make a wrapper for every function and namespace in order to easily and effortlessly port my games over.
+
+Anything that begins with "ge_", do not change. This works on GBA. Anything that begins with "bn_" is allowed to be changed.

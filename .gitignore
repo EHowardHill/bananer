@@ -1,1 +1,13 @@
-raylib/
+raylib_win64/
+raylib4Dreamcast/
+raylib_dreamcast/
+raylib_psp/
+builds/
+build/
+
+*.o
+*.img
+*.exe
+
+source.txt
+output.txt

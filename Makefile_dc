@@ -1,0 +1,42 @@
+TARGET = raylib.elf
+
+# Source / include dirs
+SRC_DIRS = src source
+INC_DIRS = include headers build
+
+# Let make find sources in these folders
+VPATH := $(SRC_DIRS)
+
+# Grab only the filenames (flat), so objects build in project root
+CFILES   := $(foreach d,$(SRC_DIRS),$(notdir $(wildcard $(d)/*.c)))
+CPPFILES := $(foreach d,$(SRC_DIRS),$(notdir $(wildcard $(d)/*.cpp)))
+OBJS := $(CPPFILES:.cpp=.o) $(CFILES:.c=.o) romdisk.o
+
+# Include paths for headers
+CXXFLAGS += $(foreach d,$(INC_DIRS),-I$(d))
+CXXFLAGS += -fno-exceptions -fno-unwind-tables -fno-asynchronous-unwind-tables
+CXXFLAGS += -fno-rtti
+
+KOS_ROMDISK_DIR = romdisk
+
+all: rm-elf $(TARGET)
+
+include $(KOS_BASE)/Makefile.rules
+
+clean: rm-elf
+	-rm -f $(OBJS)
+
+rm-elf:
+	-rm -f $(TARGET) romdisk.*
+
+$(TARGET): $(OBJS)
+	kos-c++ -o $(TARGET) $(OBJS) \
+		-lraylib -lGL -lm -lkosutils \
+		-lstdc++ -lsupc++ -lgcc
+
+run: $(TARGET)
+	$(KOS_LOADER) $(TARGET)
+
+dist: $(TARGET)
+	-rm -f $(OBJS) romdisk.img
+	$(KOS_STRIP) $(TARGET)
