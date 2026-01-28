@@ -4,6 +4,10 @@ Bananer is a set of header files that can be used to easily convert a Butano (ht
 
 It is still in ALPHA and only supports a small subset of the Butano API, mainly 2D code.
 
+**Planned additions:**
+- Affine bg support
+- 3D support
+
 Note: Bananer is not directly associated in any way with Butano.
 
 ## How to use
