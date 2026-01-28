@@ -150,4 +150,10 @@ namespace bn::core
 
         EndDrawing();
     }
+
+    void reset()
+    {
+        exit();
+        init();
+    }
 }

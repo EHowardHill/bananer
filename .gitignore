@@ -3,7 +3,7 @@ raylib4Dreamcast/
 raylib_dreamcast/
 raylib_psp/
 builds/
-build/
+build/*
 
 *.o
 *.img
@@ -11,3 +11,8 @@ build/
 
 source.txt
 output.txt
+
+audio/*
+graphics/*
+src/*
+headers/*

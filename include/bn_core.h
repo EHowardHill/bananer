@@ -22,9 +22,7 @@ namespace bn::core
     void init();
     void update();
     void exit();
-
-    // --- ADDED: reset stub ---
-    inline void reset() {}
+    void reset();
 }
 
 #endif
