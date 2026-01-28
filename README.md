@@ -15,3 +15,7 @@ This only works with Debian/Ubuntu-based systems, either natively or through WSL
 3. Run `build_win64.sh` in order to compile your project for Windows.
 
 Enjoy!
+
+# License
+
+All existing licenses, including the most permissive licenses, seem to request that the original copyright and license text be included. Let it be said in writing that I do not care for even this, do whatever you want with this code.
