@@ -2,6 +2,11 @@
 
 set -e
 
+mkdir src
+mkdir headers
+mkdir audio
+mkdir graphics
+
 sudo apt update -y
 sudo apt install -y build-essential git mingw-w64
 sudo apt install -y cmake pkgconf libreadline8 libusb-0.1 libgpgme11 libarchive-tools fakeroot
