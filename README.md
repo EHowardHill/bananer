@@ -8,7 +8,9 @@ It is still in ALPHA and only supports a small subset of the Butano API, mainly 
 - Affine bg support
 - 3D support
 
-Note: Bananer is not directly associated in any way with Butano.
+**Additional notes:**
+- Bananer is not directly associated in any way with Butano.
+- You might have to inject "common" headers from the Butano project if you use them. Please be mindful of Butano's license restrictions.
 
 ## How to use
 
